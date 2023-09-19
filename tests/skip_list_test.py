@@ -1,6 +1,6 @@
 
 import unittest
-from skip_list import SkipList
+from src.skip_list import SkipList
 
 class TestSkipList(unittest.TestCase):
 

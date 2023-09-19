@@ -1,5 +1,5 @@
 import unittest
-from src.Data_Structures.Binomial_Heap import BinomialHeap
+from src.binomial_heap import BinomialHeap
 
 class TestBinomialHeap(unittest.TestCase):
 

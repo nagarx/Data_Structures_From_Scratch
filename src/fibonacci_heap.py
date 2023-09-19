@@ -125,61 +125,6 @@ def delete_node(heap, x):
     extract_min(heap)
 
 # Implementing the consolidate function for a Fibonacci Heap
-"""def consolidate(heap):
-    max_degree = int(math.log(heap.num_nodes) / math.log(2)) if heap.num_nodes > 0 else 0
-    A = [None] * (max_degree + 1)  # Initialize an array to keep track of trees by degree
-
-    # Traverse the root list to consolidate trees of the same degree
-    w = heap.min_node
-    if w is not None:
-        start = w
-        while True:
-            x = w
-            d = x.degree
-            while A[d] is not None:
-                y = A[d]
-                if x.key > y.key:
-                    x, y = y, x
-                # Link y to x
-                link(heap, y, x)
-                A[d] = None
-                d += 1
-            A[d] = x
-            w = w.next
-            if w == start:
-                break
-
-    heap.min_node = None
-    for i in range(max_degree + 1):
-        if A[i] is not None:
-            if heap.min_node is None:
-                heap.min_node = A[i]
-            elif A[i].key < heap.min_node.key:
-                heap.min_node = A[i]"""
-
-# Helper function to link two trees in Fibonacci Heap
-def link(heap, y, x):
-    # Remove y from root list
-    y.prev.next = y.next
-    y.next.prev = y.prev
-    # Make y a child of x
-    y.parent = x
-    if x.child is None:
-        x.child = y
-        y.next = y
-        y.prev = y
-    else:
-        y.prev = x.child
-        y.next = x.child.next
-        x.child.next.prev = y
-        x.child.next = y
-    x.degree += 1
-    y.mark = False
-
-
-# Here's the modified consolidate function for the FibonacciHeap class.
-# You should replace the existing consolidate method in your FibonacciHeap class with this one.
-
 def consolidate(heap):
     D = int(math.log(heap.num_nodes) / math.log(2)) if heap.num_nodes > 0 else 0
     A = [None] * (D + 1)
@@ -233,5 +178,26 @@ def consolidate(heap):
                 heap.min_node = A[i]
             elif A[i].key < heap.min_node.key:
                 heap.min_node = A[i]
+
+# Helper function to link two trees in Fibonacci Heap
+def link(heap, y, x):
+    # Remove y from root list
+    y.prev.next = y.next
+    y.next.prev = y.prev
+    # Make y a child of x
+    y.parent = x
+    if x.child is None:
+        x.child = y
+        y.next = y
+        y.prev = y
+    else:
+        y.prev = x.child
+        y.next = x.child.next
+        x.child.next.prev = y
+        x.child.next = y
+    x.degree += 1
+    y.mark = False
+
+
 
 

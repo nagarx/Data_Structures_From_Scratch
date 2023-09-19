@@ -1,6 +1,6 @@
 
 import unittest
-from DoublyLinkedList import DoublyLinkedList
+from src.doubly_linked_list import DoublyLinkedList
 # Define the test suite class
 class TestDoublyLinkedList(unittest.TestCase):
 

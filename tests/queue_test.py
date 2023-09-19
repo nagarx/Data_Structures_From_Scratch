@@ -1,6 +1,6 @@
 
 import unittest
-from Queue import Queue
+from src.queue import Queue
 # Define the test suite class
 class TestQueue(unittest.TestCase):
 

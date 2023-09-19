@@ -1,5 +1,5 @@
 import unittest
-from src.Data_Structures.hash_table import HashTable
+from src.hash_table import HashTable
 class TestHashTable(unittest.TestCase):
 
     def test_insert_search(self):

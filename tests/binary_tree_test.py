@@ -1,6 +1,6 @@
 
 import unittest
-from BinaryTree import BinaryTree
+from src.binary_tree import BinaryTree
 
 # Define the unit test class by inheriting unittest.TestCase
 class TestBinaryTree(unittest.TestCase):

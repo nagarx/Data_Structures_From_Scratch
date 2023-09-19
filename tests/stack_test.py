@@ -1,6 +1,6 @@
 
 import unittest
-from Stack import Stack
+from src.stack import Stack
 # Define the test suite class
 class TestStack(unittest.TestCase):
 

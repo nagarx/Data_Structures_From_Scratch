@@ -1,6 +1,6 @@
 # Importing the unittest module for writing test cases
 import unittest
-from src.Data_Structures.AVLTree import AVLTree
+from src.avl_tree import AVLTree
 
 class TestAVLTree(unittest.TestCase):
 

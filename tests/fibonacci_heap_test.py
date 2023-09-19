@@ -1,6 +1,6 @@
 
 import unittest
-from src.Data_Structures.fibonacci_heap import Node, FibonacciHeap, insert, extract_min, union, decrease_key, delete_node
+from src.fibonacci_heap import Node, FibonacciHeap, insert, extract_min, union, decrease_key, delete_node
 
 class TestFibonacciHeap(unittest.TestCase):
 
